@@ -1,0 +1,57 @@
+#:import menu menu
+
+Game:
+
+<Game>:
+    menu_canvas: menu_canvas
+    score_widget: score_widget
+    easy_button_widget: easy_button_widget
+    medium_button_widget:  medium_button_widget
+    hard_button_widget: hard_button_widget
+    canvas.before:
+        Rectangle:
+            pos: self.pos
+            size: self.size
+            source: 'images/pixel.jpg'
+    Label:
+        font_name: "fonts/PermanentMarker-Regular.ttf"
+        text: "SCORE " + str(root.score)
+        size_hint: .2, .2
+        pos_hint: {"x": .06, "y": .8}
+        font_size: self.width/4
+        opacity: 0
+        id: score_widget
+    MenuWidget:
+        id: menu_canvas
+        ToggleButton:
+            text: "Easy"
+            font_name: "fonts/PermanentMarker-Regular.ttf"
+            size_hint: .18, .15
+            background_normal: ''
+            background_color: .5, 1, .5, .85
+            on_state: root.easy_level()
+            pos_hint: {"x": .2, "y": .1}
+            font_size: self.width/5.5
+            id: easy_button_widget
+        ToggleButton:
+            text: "Medium"
+            font_name: "fonts/PermanentMarker-Regular.ttf"
+            size_hint: .18, .15
+            background_normal: ''
+            background_color: .5, 1, .5, .85
+            on_state: root.medium_level()
+            pos_hint: {"x": .41, "y": .1}
+            font_size: self.width/5.5
+            id: medium_button_widget
+        ToggleButton:
+            text: "Hard"
+            font_name: "fonts/PermanentMarker-Regular.ttf"
+            size_hint: .18, .15
+            background_normal: ''
+            background_color: .5, 1, .5, .85
+            on_state: root.hard_level()
+            pos_hint: {"x": .6175, "y": .1}
+            font_size: self.width/5.5
+            id: hard_button_widget
+        
+

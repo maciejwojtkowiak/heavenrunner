@@ -1,0 +1,40 @@
+<MenuWidget>:
+    canvas.before:
+        Color:
+            rgba: 0,0,0, .8
+        Rectangle:
+            size: self.size
+    Button:
+        text: root.parent.button_text
+        font_name: "fonts/PermanentMarker-Regular.ttf"
+        size_hint: .2, .2
+        background_normal: ''
+        background_color: .5, 1, .5, .85
+        on_press: root.parent.start_button()
+        pos_hint: {"x": .4, "y": .47}
+        font_size: self.width/5
+
+    Label:
+        font_name: "fonts/PermanentMarker-Regular.ttf"
+        text: "Choose level"
+        background_normal: ''
+        size_hint: .2, .2
+        pos_hint: {"x": .4, "y": .27}
+        font_size: self.width/5
+    Label:
+        font_name: "fonts/PermanentMarker-Regular.ttf"
+        text: root.parent.label_text
+        background_normal: ''
+        size_hint: .2, .2
+        pos_hint: {"x": .4, "y": .8}
+        font_size: self.width/4
+
+    Label:
+        font_name: "fonts/PermanentMarker-Regular.ttf"
+        text: root.parent.last_Score_Label
+        background_normal: ''
+        size_hint: .2, .2
+        pos_hint: {"x": .4, "y": .67}
+        font_size: self.width/6
+        
+        
